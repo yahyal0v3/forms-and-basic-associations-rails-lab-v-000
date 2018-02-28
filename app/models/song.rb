@@ -19,14 +19,14 @@ class Song < ActiveRecord::Base
     self.genre.name if self.artist
   end
 
-  def note_contents=(content)
+  def note_content=(content)
     content.each do |c|
       note = Note.new(content: c)
       self.notes.content << note
     end
   end
 
-  def note_contents
+  def note_content
     self.notes.content
   end
 end
