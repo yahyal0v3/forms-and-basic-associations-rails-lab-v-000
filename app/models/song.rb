@@ -20,9 +20,8 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents=(contents)
-    contents.each do |c|
-      note = Note.new(content: c) if c != " "
-      self.notes << note
+    contents.each do |c|) 
+      self.notes.build(content: c) if c != ""
     end
   end
 
