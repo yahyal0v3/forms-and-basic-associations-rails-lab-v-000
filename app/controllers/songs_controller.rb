@@ -12,9 +12,9 @@ class SongsController < ApplicationController
   end
 
   def create
-    raise params.inspect
     @song = Song.new(song_params)
-
+    raise @song.inspect
+    
     if @song.save
       redirect_to @song
     else
