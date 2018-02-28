@@ -23,5 +23,6 @@ class Song < ActiveRecord::Base
     content.each do |c|
       note = Note.new(content: c)
       self.notes.content << note
+    end
   end
 end
